@@ -1,12 +1,13 @@
 package com.example.riderentandroid.core.screens.login
 
 interface LoginContract {
-    interface View {
-        fun onLoginSuccess(message: String)
-        fun onLoginError(error: String)
+    interface LoginView {
+        fun onLoginSuccessMessage()
+        fun onLoginErrorMessage(error: String)
+        fun navigateToHomeScreen()
     }
 
-    interface Presenter {
-        fun login(email: String, pass: String)
+    interface LoginPresenter {
+        fun login(username: String, password: String)
     }
 }
